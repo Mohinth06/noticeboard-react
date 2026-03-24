@@ -1,0 +1,274 @@
+.app-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3b82f6;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+.nav-links {
+    display: flex;
+    gap: 15px;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.notice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.badge {
+    background: #fee2e2;
+    color: #991b1b;
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+}
+.del-btn {
+    background: #ef4444;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.form-group input, .form-group textarea, .form-group select {
+    padding: 0.5rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+.submit-btn {
+    background: #10b981;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.filters {
+    margin-bottom: 1.5rem;
+}
+.filters input {
+    margin-right: 15px;
+    padding: 8px;
+    width: 250px;
+}
+.filters button {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.filters select {
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.reset-btn {
+    background: #6b7280;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+/* EJS Demo Page Styles */
+.ejs-card {
+    background: #fff0f6;
+    border: 2px solid #f9a8d4;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.15);
+}
+.ejs-badge {
+    display: inline-block;
+    background: #fce7f3;
+    color: #9d174d;
+    border: 1px solid #fbcfe8;
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.82rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.ejs-title {
+    color: #be185d;
+    margin-bottom: 0.75rem;
+}
+.ejs-desc {
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+.ejs-time-box {
+    background: #fff;
+    border: 1px solid #f9a8d4;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: #9d174d;
+    font-size: 0.95rem;
+    margin: 1rem 0;
+}
+.ejs-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.ejs-links a {
+    background: #ec4899;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+}
+.ejs-links a:hover {
+    background: #be185d;
+}
+
+/* ============================================
+   MongoDB $lookup Demo Page Styles
+   ============================================ */
+.lookup-card {
+    background: #fffbeb;
+    border: 2px solid #fcd34d;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-top: 1rem;
+    box-shadow: 0 6px 20px rgba(234, 179, 8, 0.12);
+}
+.lookup-badge {
+    display: inline-block;
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+    border-radius: 999px;
+    padding: 4px 14px;
+    font-size: 0.82rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.lookup-title { color: #92400e; margin-bottom: 0.5rem; }
+.lookup-desc {
+    color: #6b7280;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.93rem;
+}
+.lookup-desc code {
+    background: #fef3c7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #92400e;
+}
+.lookup-pipeline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: #fff;
+    border: 1px solid #fcd34d;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+}
+.pipeline-step {
+    background: #f59e0b;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: monospace;
+}
+.pipeline-arrow { color: #d97706; font-weight: bold; }
+.lookup-table-wrap {
+    overflow-x: auto;
+    border-radius: 8px;
+    border: 1px solid #fcd34d;
+}
+.lookup-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+}
+.lookup-table th {
+    background: #fef3c7;
+    color: #92400e;
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid #fcd34d;
+    white-space: nowrap;
+}
+.lookup-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #fef9c3;
+    color: #374151;
+    vertical-align: middle;
+}
+.lookup-table tr:last-child td { border-bottom: none; }
+.lookup-table tr:hover td { background: #fffbeb; }
+.lookup-title-cell { font-weight: 600; color: #1e293b; }
+.lookup-type-badge {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fcd34d;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: bold;
+}
+.lookup-enriched {
+    color: #166534;
+    font-weight: 600;
+    background: #dcfce7;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+}
+.lookup-missing {
+    color: #9ca3af;
+    font-style: italic;
+    font-size: 0.82rem;
+}
+.lookup-note {
+    margin-top: 1rem;
+    color: #6b7280;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+.lookup-note code {
+    background: #fef3c7;
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #92400e;
+}
