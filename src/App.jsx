@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext, useMemo, useRef, useReducer, cr
 import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
 
-// API base URL — reads from .env (VITE_API_URL) in dev,
-// overridden to deployed Render URL in Vercel production settings
-const API_BASE = import.meta.env.VITE_API_URL || 'https://noticeboard-backend-fwec.onrender.com';
+// FORCED FIX FOR PRODUCTION: Ignore .env entirely as it may have the wrong placeholder URL
+// Hardcoding exactly to your live Node Server on Render
+const API_BASE = 'https://noticeboard-backend-fwec.onrender.com';
 
 // ============================================
 // EJS Demo Page — fetches /api/dynamic from Express
