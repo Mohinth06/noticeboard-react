@@ -2,9 +2,10 @@ import React, { useState, useEffect, useContext, useMemo, useRef, useReducer, cr
 import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import './App.css';
 
-// FORCED FIX FOR PRODUCTION: Ignore .env entirely as it may have the wrong placeholder URL
-// Hardcoding exactly to your live Node Server on Render
-const API_BASE = 'https://noticeboard-backend-fwec.onrender.com';
+// SMART API BASE: Automatically switches between local and production backend
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? 'http://localhost:3000'
+    : 'https://noticeboard-backend-fwec.onrender.com';
 
 // ============================================
 // EJS Demo Page — fetches /api/dynamic from Express
