@@ -140,7 +140,11 @@ const HomePage = ({ notices, setNotices, loading }) => {
     if (loading) return <p>Loading notices via React Custom Hook...</p>;
 
     const handleDelete = (id) => {
-        setNotices(prev => prev.filter(n => n.id !== id));
+        fetch(`${API_BASE}/api/notices/${id}`, { method: 'DELETE' })
+            .then(res => {
+                if (res.ok) setNotices(prev => prev.filter(n => n.id !== id));
+            })
+            .catch(err => console.error("Error deleting notice:", err));
     };
 
     return (
