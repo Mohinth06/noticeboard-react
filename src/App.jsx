@@ -4,7 +4,7 @@ import './App.css';
 
 // API base URL — reads from .env (VITE_API_URL) in dev,
 // overridden to deployed Render URL in Vercel production settings
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:3000';
+const API_BASE = import.meta.env.VITE_API_URL || 'https://noticeboard-backend-fwec.onrender.com';
 
 // ============================================
 // EJS Demo Page — fetches /api/dynamic from Express
